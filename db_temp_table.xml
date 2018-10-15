@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
+<!-- Active URL: http://ondras.zarovi.cz/sql/demo/?keyword=default -->
+<sql>
+    <datatypes db="mysql">
+        <group color="rgb(238,238,170)" label="Numeric">
+            <type label="INT" quote="" sql="INT" length="0"/>
+            <type label="DECIMAL" quote="" sql="DECIMAL" length="1" re="DEC"/>
+        </group>
+        <group color="rgb(255,200,200)" label="Character">
+            <type label="VARBINARY" quote="'" sql="VARBINARY" length="1"/>
+            <type label="NVARCHAR" quote="'" sql="NVARCHAR" length="1"/>
+        </group>
+        <group color="rgb(200,255,200)" label="Date &amp; Time">
+            <type label="DATETIME" quote="'" sql="DATETIME" length="0"/>
+        </group>
+        <group color="rgb(200,200,255)" label="Miscellaneous">
+            <type label="BIT" quote="" sql="bit" length="0"/>
+        </group>
+    </datatypes>
+    <table x="199" y="83" name="Books">
+        <row name="id" null="1" autoincrement="1">
+            <datatype>INT</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="name" null="0" autoincrement="0">
+            <datatype>NVARCHAR</datatype>
+            <default>'NULL'</default>
+        </row>
+        <row name="publisher" null="0" autoincrement="0">
+            <datatype>NVARCHAR</datatype>
+            <default>'NULL'</default>
+        </row>
+        <row name="year" null="1" autoincrement="0">
+            <datatype>DATETIME</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="volumes" null="1" autoincrement="0">
+            <datatype>INT</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="location" null="0" autoincrement="0">
+            <datatype>NVARCHAR</datatype>
+            <default>'NULL'</default>
+        </row>
+        <row name="section" null="1" autoincrement="0">
+            <datatype>NVARCHAR</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="author" null="1" autoincrement="0">
+            <datatype>NVARCHAR</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="description" null="1" autoincrement="0">
+            <datatype>NVARCHAR</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="additional_editor" null="1" autoincrement="0">
+            <datatype>NVARCHAR</datatype>
+            <default>NULL</default>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>id</part>
+        </key>
+    </table>
+</sql>
