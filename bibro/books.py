@@ -53,7 +53,7 @@ def create():
                 (title, author, publish_year)
             )
             db.commit()
-            return redirect(url_for('blog.index'))
+            return redirect(url_for('books.index'))
 
-    return render_template('blog/create.html')
+    return render_template('books/create.html')
 
