@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}New Book{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="title">Title</label>
+    <input name="title" id="title" value="{{ request.form['title'] }}" required>
+    <label for="author">Author</label>
+    <textarea name="author" id="author">{{ request.form['author'] }}</textarea>
+    <label for="publisher">Publisher</label>
+    <textarea name="publisher" id="publisher">{{ request.form['publisher'] }}</textarea>
+    <label for="publish_year">Publish Year</label>
+    <textarea name="publish_year" id="publish_year">{{ request.form['publish_year'] }}</textarea>
+    <input type="submit" value="Save">
+  </form>
+{% endblock %}
