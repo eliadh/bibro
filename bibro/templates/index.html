@@ -1,12 +1,6 @@
-<html>
-<head>
-    {% if title %}
-    <title>{{ title }}</title>
-    {% else %}
-    <title>Welcome to Bibro!</title>
-    {% endif %}
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content%}
 <h1>Hello, {{ user.username }}!</h1>
 <table>
     <tr>
@@ -24,5 +18,4 @@
     </tr>
     {% endfor %}
 </table>
-</body>
-</html>
+{% endblock %}

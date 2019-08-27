@@ -1,29 +1,17 @@
 <!-- g, url_for(), get_flashed_messages() are automatically available in templates -->
 
 
-<!doctype html>
-<!-- `title` changes the titile displayed in the browser tab and windows title -->
-<title>{% block title %}{% endblock %} - Bibro</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<nav>
-  <h1>Bibro</h1>
-  <ul>
-    {% if g.user %}
-      <li><span>{{ g.user['username'] }}</span>
-      <!--<li><a href="{{ url_for('auth.logout') }}">Log Out</a>-->
+<html>
+<head>
+    {% if title %}
+    <title>{{ title }}</title>
     {% else %}
-      <li><a href="{{ url_for('auth.register') }}">Register</a>
-      {# <li><a href="{{ url_for('auth.login') }}">Log In</a> #}
+    <title>Welcome to Bibro!</title>
     {% endif %}
-  </ul>
-</nav>
-<section class="content">
-<!-- `header` is similar to `title` but changes the title displayed in the page -->
-<header>
-    {% block header %}{% endblock %}
-  </header>
-  {% for message in get_flashed_messages() %}
-    <div class="flash">{{ message }}</div>
-  {% endfor %}
-  {% block content %}{% endblock %}
-</section>
+</head>
+<body>
+<div>Bibro: <a href="/index">Home</a></div>
+<hr>
+{% block content%}{% endblock %}
+</body>
+</html>
