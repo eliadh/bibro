@@ -1,0 +1,4 @@
+include bibro/schema.sql
+graft bibro/static
+graft bibro/templates
+global-exclude *.pyc
