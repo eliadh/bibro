@@ -7,7 +7,7 @@ CREATE TABLE user (
   password TEXT NOT NULL
 );
 
-CREATE TABLE post (
+CREATE TABLE books (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   author TEXT NOT NULL,
   published INTEGER NOT NULL,
